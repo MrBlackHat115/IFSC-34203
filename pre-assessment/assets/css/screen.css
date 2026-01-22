@@ -1,0 +1,116 @@
+/* This rule removes default browser margin and padding from all elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  	/* Background color matches image */
+	background-color: #171717;
+	/* Background image repeats on the x-axis */
+	background-image: url("assets/img/bg-tile.jpg");
+	background-repeat: repeat-x;
+	font-size: 16px;
+	line-height: 1.5em;
+}
+
+#container {
+	max-width: 800px;
+	margin: 20px auto;
+	text-align: left;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+}
+
+#header h1 a {
+	display: block;
+	width: 800px;
+	height: 140px;
+	background: url("../resources/assessment-3.jpg") no-repeat;
+	text-indent: -9999px;
+}
+
+.content-image {
+  float: right;
+  border: 2px solid #000000;
+  margin: 15px 0 15px 15px;
+}
+
+/* Content heading styles */
+#content h2 {
+	color: #06f5f5;
+	font-size: 28px;
+	border-bottom: 2px solid #ebe713;
+	padding-bottom: 5px;
+}
+
+#content h3 {
+	color: #0f8d19;
+	font-size: 22px;
+	margin-top: 20px;
+}
+
+#content h4 {
+	color: #2682c0;
+	font-size: 18px;
+	margin-top: 15px;
+}
+
+#nav {
+	background-color: #000;
+}
+
+#nav ul {
+	list-style: none;
+	margin-left: 10px;
+}
+
+#nav ul li {
+	display: inline;
+	line-height: 35px;
+}
+
+#nav ul li a {
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 18px;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 4px solid #000;
+}
+
+#nav ul li a:hover {
+	border-bottom: 3px solid #ccc;
+}
+
+#content {
+	margin: 20px;
+}
+
+#content p {
+	margin-bottom: 15px;
+}
+
+.alert {
+	background-color: #8b0000;
+	color: #ffffff;
+	padding: 10px;
+}
+
+.favorite-link:hover {
+	background-color: #ffcc00;
+}
+
+#footer {
+	background-color: #000;
+	color: #fff;
+	height: 25px;
+}
+
+#footer h6 {
+	font-size: 12px;
+	line-height: 25px;
+	margin: 0 20px;
+}
