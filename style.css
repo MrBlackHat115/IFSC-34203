@@ -1,0 +1,71 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page Layout (Grid) */
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #ffffff;
+}
+
+/* Header */
+header {
+  background-color: #000000;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Responsive Typography */
+header h1 {
+  font-size: 3.4rem;
+}
+
+/*Responsive Typography */
+header p {
+  font-size: 2.1rem;
+  opacity: 0.85;
+}
+
+/* Main Content */
+main {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav li {
+  margin: 1rem 0;
+}
+
+nav a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #09b7ec;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
