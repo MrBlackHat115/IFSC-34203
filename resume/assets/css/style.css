@@ -1,0 +1,351 @@
+/* =====================================
+   CSS Custom Properties
+   ===================================== */
+
+:root{
+  --main-bg-color:#000000;
+  --primary-type-color:#eeeeee;
+  --accent-color-1:#26aae2;
+  --card-bg:#1e293b;
+
+  /* Gradient */
+  --main-gradient:linear-gradient(135deg,#720975,#17d4ec);
+}
+
+/* =====================================
+   Box Sizing
+   ===================================== */
+
+html{
+  box-sizing:border-box;
+}
+
+*,
+*:before,
+*:after{
+  box-sizing:inherit;
+}
+
+/* =====================================
+   Helper Classes
+   ===================================== */
+
+.visuallyhidden{
+  border:0;
+  clip:rect(0 0 0 0);
+  height:1px;
+  margin:-1px;
+  overflow:hidden;
+  padding:0;
+  position:absolute;
+  width:1px;
+  white-space:nowrap;
+}
+
+/* =====================================
+   Typography
+   ===================================== */
+
+body{
+  font-family:"Monospace", monospace;
+  background:var(--main-bg-color);
+  color:var(--primary-type-color);
+  line-height:1.6;
+}
+
+/* =====================================
+   Images
+   ===================================== */
+
+img{
+  max-width:100%;
+  border-radius:8px;
+  /* Initial glow effect (optional but recommended) */
+  box-shadow: 0 0 30px 5px #8b2bb1;
+  /* Apply the continuous animation */
+  animation: pulse-glow 2s infinite alternate; /* 2s duration, infinite loop, alternates direction */
+}
+
+/* =====================================
+   Container
+   ===================================== */
+
+.container{
+  width:1060px;
+  margin:0 auto;
+  background:var(--card-bg);
+  border-radius:10px;
+  padding-bottom:20px;
+}
+
+/* =====================================
+   Links
+   ===================================== */
+
+a:link,
+a:visited{
+  color:var(--primary-type-color);
+}
+
+/* =====================================
+   Navigation
+   ===================================== */
+
+nav{
+  padding:1px;
+  background:var(--main-gradient);
+  border-radius:10px 10px 0 0;
+}
+
+nav ul{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  padding:20px 20px 0 20px;
+}
+
+nav li{
+  list-style-type:none;
+}
+
+/* NAV BUTTONS */
+
+nav a:link,
+nav a:visited{
+  display:block;
+  padding:8px 16px;
+  text-align:center;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:0.75em;
+  border-radius:6px;
+  color:#fff;
+  background:rgba(0,0,0,0.5);
+  transition:all .3s ease;
+}
+
+/* Glow hover effect */
+
+nav a:hover{
+  transform:translateY(-2px);
+  box-shadow:
+  0 0 8px var(--accent-color-1),
+  0 0 18px var(--accent-color-1);
+}
+
+/* =====================================
+   Main
+   ===================================== */
+
+main{
+  padding:1px 20px;
+}
+
+main h1{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  text-align:center;
+  font-weight:400;
+  font-variant:small-caps;
+}
+
+/* Divider lines */
+
+main h1:before,
+main h1:after{
+  background-color:var(--accent-color-1);
+  content:"\a0";
+  flex-grow:1;
+  height:1px;
+  position:relative;
+  top:0.77em;
+}
+
+main h1:before{
+  margin-right:15px;
+}
+
+main h1:after{
+  margin-left:15px;
+}
+
+/* =====================================
+   Personal Details Grid
+   ===================================== */
+
+dl{
+  font-size:.8rem;
+  display:grid;
+  grid-template:repeat(8,50px)/8em 1fr;
+}
+
+dt{
+  font-weight:800;
+  grid-column:1;
+  padding:10px 0;
+  border-bottom:1px solid var(--accent-color-1);
+}
+
+dd{
+  margin:0;
+  grid-column:2;
+  padding:10px 0;
+  border-bottom:1px solid var(--accent-color-1);
+}
+
+/* =====================================
+   Resume Buttons (Glow Effect)
+   ===================================== */
+
+.related-links{
+  display:flex;
+  justify-content:center;
+  list-style:none;
+  padding:0;
+}
+
+.related-links li{
+  margin-right:20px;
+}
+
+.related-links a{
+  display:inline-block;
+  border-radius:6px;
+  padding:10px 18px;
+  text-align:center;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:0.75em;
+  background:var(--main-gradient);
+  color:#fff;
+  transition:all .3s ease;
+}
+
+/* Glow hover effect */
+
+.related-links a:hover{
+  transform:translateY(-3px);
+  box-shadow:
+  0 0 10px var(--accent-color-1),
+  0 0 20px var(--accent-color-1),
+  0 0 35px var(--accent-color-1);
+}
+
+/* =====================================
+   Skills
+   ===================================== */
+
+#skills li{
+  list-style-type:square;
+}
+
+/* =====================================
+   Job & Education Sections
+   ===================================== */
+
+.job,
+.certificate{
+  border-bottom:1px solid var(--accent-color-1);
+  padding-bottom:20px;
+}
+
+.job *[itemprop="jobTitle"],
+.job *[itemprop="name"],
+.job *[itemprop="url"],
+.job *[itemprop="addressLocality"],
+.certificate *[itemprop="name"]{
+  display:block;
+}
+
+.job h3{
+  margin:20px 0 0 0;
+}
+
+/* =====================================
+   Footer
+   ===================================== */
+
+footer{
+  text-align:center;
+  padding:20px 0;
+  font-size:.8rem;
+}
+
+/* =====================================
+   Reorder Source Using Grid
+   ===================================== */
+
+main.container{
+  display:grid;
+  grid-template-areas:
+  "title"
+  "about"
+  "education"
+  "experience"
+  "skills";
+}
+
+.page-title{
+  grid-area:title;
+}
+
+#about{
+  grid-area:about;
+}
+
+#skills{
+  grid-area:skills;
+}
+
+#experience{
+  grid-area:experience;
+}
+
+#education{
+  grid-area:education;
+}
+
+/* Mobile Devices (Base/Default)
+    Examples: iPhone, Android phones
+ */
+
+@media (max-width: 767px) {
+  .container {
+     width: 100%;
+     margin: 0;
+     border-radius: 0;
+  }
+
+  nav ul {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 10px;
+  }
+
+  main {
+     padding: 15px;
+  }
+
+  dl {
+     grid-template: repeat(auto-fit, 40px) / 1fr;
+  }
+
+  dt, dd {
+     grid-column: 1;
+     padding: 8px 0;
+  }
+}
+
+/* Tablet Devices ... */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  nav ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  dl {
+    grid-template: repeat(8, 50px) / 8em 1fr;
+  }
+}
