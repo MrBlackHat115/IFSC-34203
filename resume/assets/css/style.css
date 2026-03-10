@@ -71,10 +71,10 @@ img{
    ===================================== */
 
 .container{
-  width:1060px;
-  margin:0 auto;
+  width:100%;
+  margin:0;
   background:var(--card-bg);
-  border-radius:10px;
+  border-radius:0;
   padding-bottom:20px;
 }
 
@@ -99,8 +99,9 @@ nav{
 
 nav ul{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  padding:20px 20px 0 20px;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  padding:20px;
 }
 
 nav li{
@@ -305,40 +306,13 @@ main.container{
   grid-area:education;
 }
 
-/* Mobile Devices (Base/Default)
-    Examples: iPhone, Android phones
- */
-
-@media (max-width: 767px) {
-  .container {
-     width: 100%;
-     margin: 0;
-     border-radius: 0;
-  }
-
-  nav ul {
-     grid-template-columns: repeat(2, 1fr);
-     gap: 10px;
-  }
-
-  main {
-     padding: 15px;
-  }
-
-  dl {
-     grid-template: repeat(auto-fit, 40px) / 1fr;
-  }
-
-  dt, dd {
-     grid-column: 1;
-     padding: 8px 0;
-  }
-}
-
 /* Tablet Devices ... */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
+
   .container {
     width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
   }
 
   nav ul {
@@ -348,4 +322,15 @@ main.container{
   dl {
     grid-template: repeat(8, 50px) / 8em 1fr;
   }
+
+}
+
+
+/* Desktop Devices ... */
+@media (min-width:1060px){
+
+  .container{
+    width:1060px;
+  }
+
 }
