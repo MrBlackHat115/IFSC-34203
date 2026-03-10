@@ -126,11 +126,11 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.content-section:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
 }
 
 a {
@@ -138,39 +138,39 @@ a {
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
-}
 
-a:hover {
-  color: var(--accent-color);
-  text-decoration: underline;
+  &:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
 }
 
 nav {
   margin: 2rem 0;
-}
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-nav a {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: var(--secondary-color);
-  color: white;
-  border-radius: 4px;
-  transition: background 0.3s ease;
-}
+  a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 4px;
+    transition: background 0.3s ease;
 
-nav a:hover {
-  background: var(--accent-color);
-  color: white;
-  text-decoration: none;
+    &:hover {
+      background: var(--accent-color);
+      color: white;
+      text-decoration: none;
+    }
+  }
 }
 
 footer {
@@ -179,56 +179,62 @@ footer {
   text-align: center;
   padding: 1.5rem;
   margin-top: 3rem;
-}
 
-footer p {
-  margin: 0;
-  color: white;
+  p {
+    margin: 0;
+    color: white;
+  }
 }
 
 /* Layout */
-
 .layout {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
 }
 
-/* Sidebar */
+/* image size */
+.flexbox-completion .screenshot img {
+    max-width: 600px;   /* limits the image width */
+    width: 100%;        /* makes image responsive within container */
+    height: auto;       /* keeps original aspect ratio */
+    display: block;     /* removes extra space below image */
+    border: 2px solid #444; /* optional: adds a border around image */
+}
 
+/* Sidebar */
 .sidebar {
   width: 250px;
   background: white;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
 
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-.sidebar li {
-  margin-bottom: 1rem;
-}
+    li {
+      margin-bottom: 1rem;
 
-.sidebar a {
-  display: block;
-  padding: 0.75rem 1rem;
-  background: var(--secondary-color);
-  color: rgb(255, 255, 255);
-  border-radius: 4px;
-  text-align: center;
-}
+      a {
+        display: block;
+        padding: 0.75rem 1rem;
+        background: var(--secondary-color);
+        color: rgb(255, 255, 255);
+        border-radius: 4px;
+        text-align: center;
 
-.sidebar a:hover {
-  background: var(--accent-color);
+        &:hover {
+          background: var(--accent-color);
+        }
+      }
+    }
+  }
 }
 
 /* Main content area */
-
 .content {
   flex: 1;
   background: white;
@@ -256,31 +262,35 @@ footer p {
   position: absolute;
   white-space: nowrap;
   width: 1px;
-}
 
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
+  &.focusable {
+    &:active,
+    &:focus {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      white-space: inherit;
+      width: auto;
+    }
+  }
 }
 
 .invisible {
   visibility: hidden;
 }
 
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
+.clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
 
-.clearfix::after {
-  clear: both;
+  &::after {
+    clear: both;
+  }
 }
 
 /* ==========================================================================
@@ -347,8 +357,7 @@ footer p {
    Responsive Design
    ========================================================================== */
 
-/* 📱 Mobile & Small Tablets
-   Examples: iPhone SE, iPhone 12/13/14, Galaxy S21, Pixel 6, iPad Mini (portrait) */
+/* 📱 Mobile & Small Tablets */
 @media only screen and (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -366,20 +375,20 @@ footer p {
     padding: 1.5rem;
   }
 
-  /* Stack navigation vertically for narrow screens */
-  nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
+  nav {
+    ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
 
-  nav a {
-    display: block;
-    text-align: center;
+    a {
+      display: block;
+      text-align: center;
+    }
   }
 }
 
-/* 🖥 High-resolution screens (Retina & 4K)
-   Examples: MacBook Pro Retina, iMac 5K, 4K monitors */
+/* 🖥 High-resolution screens (Retina & 4K) */
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
   (min-resolution: 1.25dppx),
