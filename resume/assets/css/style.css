@@ -306,6 +306,27 @@ main.container{
   grid-area:education;
 }
 
+@media (max-width: 767px) {
+  #headshot {
+    justify-self: center; /* centers the image in the grid column */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#headshot {
+  width: 80%;  /* fill more of container on mobile */
+  max-width: 250px; 
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 /* Headshot: fully centered on mobile */
 #headshot {
   display: block;
