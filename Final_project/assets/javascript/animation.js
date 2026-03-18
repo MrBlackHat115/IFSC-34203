@@ -10,5 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { threshold: 0.2 }); // Trigger when 20% visible
 
-  toys.forEach(toy => observer.observe(toy));   
+  toys.forEach(toy => observer.observe(toy));
+
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("nav-links");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  }
 });

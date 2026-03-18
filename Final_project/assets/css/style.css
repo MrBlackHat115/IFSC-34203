@@ -51,10 +51,19 @@ section {
    Navigation
    ===================================== */
 nav {
+  position: relative;
+  z-index: 100;
   background: #1f2833;
   padding: 12px 0;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(102, 252, 241, 0.3);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 nav ul {
@@ -81,6 +90,18 @@ nav a:hover {
   color: #0b0c10;
   box-shadow: 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color);
   transform: translateY(-2px);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: var(--accent-color);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 101;
 }
 
 /* =====================================
@@ -472,6 +493,34 @@ strong {
     height: 180px;
     object-fit: cover;
   }
+
+/* Navigation adjustments */
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .menu-toggle {
+    display: block;    
+  }
+
+  #nav-links {
+    display: none;     
+    flex-direction: column;
+    gap: 25px;
+    background: #1f2833;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.3);
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
 }
 
 /* Tablet */
