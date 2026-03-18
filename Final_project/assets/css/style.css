@@ -7,8 +7,8 @@
   --hover-color: #45a29e;
   --gradient: linear-gradient(135deg, #6f1d1b, #45a29e);
   --shadow-color: #66fcf1;
-  --font-main: "Roboto Mono", monospace;
-  --font-title: "Share Tech Mono", monospace;
+  --font-main: "jetbrains mono", monospace;
+  --font-title: "jetbrains mono", monospace;
 }
 
 /* Global Reset */
@@ -74,6 +74,25 @@ nav a:hover {
 }
 
 /* =====================================
+   Subtitle
+   ===================================== */
+.subtitle {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+/* Text styles */
+p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+  
+
+/* =====================================
    Page Title
    ===================================== */
 .page-title {
@@ -95,6 +114,30 @@ nav a:hover {
   margin: 15px auto;
   background: var(--accent-color);
   border-radius: 2px;
+}
+
+/* View github link center*/
+.view-github {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* View github link button*/
+.view-github-btn {
+  display: inline-block;
+  background: #000000;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.view-github-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 35px var(--accent-color);
 }
 
 /* Link buttons */
@@ -167,6 +210,13 @@ nav a:hover {
   transition: 0.3s transform ease-in-out;
 }
 
+.toy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
 /* Toys fade-in animation */
 .toy {
   opacity: 0;               /* Start invisible */
@@ -236,6 +286,7 @@ nav a:hover {
    About / Resources / Contact
    ===================================== */
 section h2 {
+  text-align: center;
   color: var(--accent-color);
   margin-bottom: 20px;
   font-size: 2rem;
@@ -248,6 +299,34 @@ section#about img {
   width: 200px;
   border-radius: 50%;
   box-shadow: 0 0 20px var(--shadow-color);
+}
+
+/* Grid container */
+.resources-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+/* Each box (like .toy) */
+.resources-box li {
+  display: flex;
+  flex-direction: column; 
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.3);
+  transition: 0.3s transform ease-in-out;
+}
+
+.certification-image {
+  display: block;
+  margin: auto;
+  width: 100px;
+  margin-bottom: 10px;
 }
 
 dl {
@@ -283,6 +362,12 @@ footer a {
   color: #ffffff;           /* Make link white */
   text-decoration: underline; /* Optional: underline */
   transition: color 0.3s ease;
+}
+
+strong {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: larger;
 }
 
 /* Responsive Media Queries */
