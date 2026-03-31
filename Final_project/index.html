@@ -93,9 +93,17 @@
   <section id="toys" itemscope itemtype="https://schema.org/CreativeWork">
     <h2>Toys</h2>
     <p>Explore our collection of cybersecurity tools and labs designed for learning and practice.</p>
+
+    <!-- Button to filter toys by category -->
+        <div class="toy-filters">
+          <button class="filter-btn" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+          <button class="filter-btn" data-filter="bash">Bash</button>
+          <button class="filter-btn" data-filter="labs">Labs</button>
+        </div>
     <div class="toy-grid">
 
-        <div class="toy">
+        <div class="toy" data-category="python">
             <img class="toy-image" src="assets/img/port-scanner.png" alt="Port Scanner Tool Screenshot">
             <div class="toy-content">
                 <h3>Port Scanner</h3>
@@ -107,7 +115,7 @@
             </div>
         </div>
 
-        <div class="toy">
+        <div class="toy" data-category="python">
             <img class="toy-image" src="assets/img/vulnhunter.png" alt="VulnHunter Tool Screenshot">
             <div class="toy-content">
                 <h3>VulnHunter</h3>
@@ -119,7 +127,7 @@
             </div>
         </div>
 
-        <div class="toy">
+        <div class="toy" data-category="labs">
             <img class="toy-image" src="assets/img/hacking-lab.png" alt="Basic Ethical Hacking Lab Screenshot">
             <div class="toy-content">
                 <h3>Basic Ethical Hacking Lab</h3>
@@ -131,7 +139,7 @@
             </div>
         </div>
 
-        <div class="toy">
+        <div class="toy" data-category="labs">
             <img class="toy-image" src="assets/img/help-desk-lab.png" alt="Help Desk Administration Lab Screenshot">
             <div class="toy-content">
                 <h3>Help Desk Administration Lab</h3>
@@ -143,7 +151,7 @@
             </div>
         </div>
 
-        <div class="toy">
+        <div class="toy" data-category="bash">
             <img class="toy-image" src="assets/img/recon-scan-script.png" alt="Recon Scan Script Screenshot">
             <div class="toy-content">
                 <h3>Recon Scan Script</h3>
@@ -155,7 +163,7 @@
             </div>
         </div>
 
-        <div class="toy">
+        <div class="toy" data-category="python">
             <img class="toy-image" src="assets/img/directory_discovery.png" alt="Directory Discovery Tool Screenshot">
             <div class="toy-content">
                 <h3>Directory Discovery Tool</h3>
@@ -167,7 +175,7 @@
             </div>
         </div>
 
-        <div class="toy">
+        <div class="toy" data-category="python">
             <img class="toy-image" src="assets/img/login_bruteforcer.png" alt="Login Bruteforcer Tool Screenshot">
             <div class="toy-content">
                 <h3>Login Bruteforcer</h3>

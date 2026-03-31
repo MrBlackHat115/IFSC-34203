@@ -21,3 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+/* Filter functionality for toys */
+const filterButtons = document.querySelectorAll('.filter-btn');
+const toys = document.querySelectorAll('.toy');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const filter = button.getAttribute('data-filter');
+
+    toys.forEach(toy => {
+      if (filter === 'all' || toy.getAttribute('data-category') === filter) {
+        toy.style.display = 'flex'; // or 'block' depending on your layout
+      } else {
+        toy.style.display = 'none';
+      }
+    });
+  });
+});

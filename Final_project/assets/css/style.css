@@ -20,6 +20,7 @@
   padding: 0;
 }
 
+/* Global Styles */
 body {
   font-family: var(--font-main);
   background: var(--bg-color);
@@ -27,6 +28,7 @@ body {
   line-height: 1.6;
 }
 
+/* Prevent horizontal scroll and ensure sections have spacing */
 body, html {
   margin: 0;
   padding: 0;
@@ -120,6 +122,7 @@ nav a:hover {
 p {
   text-align: center;
   font-size: 1.1rem;
+  margin-bottom: 30px;
 }
   
 
@@ -190,6 +193,30 @@ p {
 .download-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 10px #02ff95, 0 0 20px #02ff95, 0 0 35px #02ff95;
+}
+
+/* Filter buttons */
+.toy-filters {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 10px 30px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  color: #0b0c10;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.filter-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px var(--shadow-color), 0 0 20px var(--shadow-color), 0 0 35px var(--shadow-color);
 }
 
 
@@ -422,6 +449,7 @@ section#about img {
   transform: translateY(-5px);
 }
 
+/* Certification image */
 .certification-image {
   display: block;
   margin: auto;
