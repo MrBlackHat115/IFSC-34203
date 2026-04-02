@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <h1 class="fw-light">MrBlackHat Toys</h1>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#toys">Toys</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Image -->
+  <div class="header-image-container">
+    <img class="header-image" src="assets/img/hacker.jpg" alt="Hacker Image">
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-grow-1">
+
+    <!-- Hero Section -->
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">MrBlackHat Toys</h1>
+          <p class="lead text-body-secondary">Tools and Labs That Teach You Cybersecurity… Without Hacking Your Mom’s Wi-Fi</p>
+          <p><a href="https://www.github.com/MrBlackHat115" class="btn btn-primary my-2">View GitHub</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toys Section -->
+    <section id="toys" class="py-5 text-center container">
+      <h2 class="page-title">Toys</h2>
+      <p class="lead text-body-secondary">A collection of cybersecurity tools and labs designed to teach ethical hacking techniques in a fun and engaging way.</p>
+
+      <div class="toy-grid">
+        <div class="toy">
+          <img class="toy-image" src="assets/img/port-scanner.png" alt="Port Scanner Tool Screenshot">
+          <div class="toy-content">
+            <h3>Port Scanner</h3>
+            <p>Python-based tool that resolves hostnames into IPv4 addresses and performs TCP port scanning.</p>
+            <a href="https://github.com/MrBlackHat115/Port-Scanner" target="_blank" class="download-btn">Download</a>
+          </div>
+        </div>
+
+        <div class="toy">
+          <img class="toy-image" src="assets/img/vulnhunter.png" alt="VulnHunter Tool Screenshot">
+          <div class="toy-content">
+            <h3>VulnHunter</h3>
+            <p>A vulnerability discovery framework for scanning, validation, and basic exploitation techniques.</p>
+            <a href="https://github.com/MrBlackHat115/VulnHunter" target="_blank" class="download-btn">Download</a>
+          </div>
+        </div>
+
+        <div class="toy">
+          <img class="toy-image" src="assets/img/hacking-lab.png" alt="Basic Ethical Hacking Lab Screenshot">
+          <div class="toy-content">
+            <h3>Basic Ethical Hacking Lab</h3>
+            <p>Beginner-friendly lab teaching reconnaissance, scanning, and vulnerability analysis.</p>
+            <a href="https://github.com/MrBlackHat115/Basic-Ethical-Hacking-Lab" target="_blank" class="download-btn">Download</a>
+          </div>
+        </div>
+
+        <div class="toy">
+          <img class="toy-image" src="assets/img/help-desk-lab.png" alt="Help Desk Lab Screenshot">
+          <div class="toy-content">
+            <h3>Help Desk Administration Lab</h3>
+            <p>Hands-on lab simulating real-world IT support and system administration tasks.</p>
+            <a href="https://github.com/MrBlackHat115/Help-Desk-Administration-Lab" target="_blank" class="download-btn">Download</a>
+          </div>
+        </div>
+
+        <div class="toy">
+          <img class="toy-image" src="assets/img/recon-scan-script.png" alt="Recon Scan Script Screenshot">
+          <div class="toy-content">
+            <h3>Recon Scan Script</h3>
+            <p>Bash script automating reconnaissance tasks like port discovery and directory enumeration.</p>
+            <a href="https://github.com/MrBlackHat115/Recon_scan.sh" target="_blank" class="download-btn">Download</a>
+          </div>
+        </div>
+
+        <div class="toy">
+          <img class="toy-image" src="assets/img/directory_discovery.png" alt="Directory Discovery Tool Screenshot">
+          <div class="toy-content">
+            <h3>Directory Discovery Tool</h3>
+            <p>Python tool for directory enumeration using wordlists to uncover hidden paths.</p>
+            <a href="https://github.com/MrBlackHat115/Directory-discovery" target="_blank" class="download-btn">Download</a>
+          </div>
+        </div>
+
+        <div class="toy">
+          <img class="toy-image" src="assets/img/login_bruteforcer.png" alt="Login Bruteforcer Screenshot">
+          <div class="toy-content">
+            <h3>Login Bruteforcer</h3>
+            <p>Python tool automating login attempts to test authentication system security.</p>
+            <a href="https://github.com/MrBlackHat115/Login-Bruteforcer" target="_blank" class="download-btn">Download</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <h2>About The Developer</h2>
+      <img src="assets/img/Linkedin-picture.png" alt="Conner Woods">
+      <p>Conner Woods is a cybersecurity student focused on ethical hacking, network security, and IT support. His goal is to build a career in cybersecurity, and he shares projects and labs to help others learn and practice ethical hacking skills. Conner is passionate about cybersecurity education and aims to create accessible resources for learners at all levels.</p>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-5">
+      <h2>Resources</h2>
+      <div class="resources-box">
+        <div class="toy">
+          <img class="certification-image" src="assets/img/cert-icon.png" alt="Cybrary Resource Screenshot">
+          <h3>Cybrary</h3>
+          <p>Online platform for cybersecurity training and certification.</p>
+          <a href="https://www.cybrary.it" target="_blank">Visit Website</a>
+        </div>
+
+        <div class="toy">
+          <img class="certification-image" src="assets/img/cert-icon.png" alt="Offensive Security Resource Screenshot">
+          <h3>Offensive Security</h3>
+          <p>Provider of OSCP, PenTest+, and other practical cybersecurity certifications.</p>
+          <a href="https://www.offensive-security.com" target="_blank">Visit Website</a>
+        </div>
+
+        <div class="toy">
+          <img class="certification-image" src="assets/img/cert-icon.png" alt="Hack The Box Resource Screenshot">
+          <h3>HackTheBox</h3>
+          <p>Hands-on penetration testing labs, CTF challenges, and community learning.</p>
+          <a href="https://www.hackthebox.com" target="_blank">Visit Website</a>
+        </div>
+
+        <div class="toy">
+          <img class="certification-image" src="assets/img/cert-icon.png" alt="TryHackMe Resource Screenshot">
+          <h3>TryHackMe</h3>
+          <p>Interactive, beginner-friendly cybersecurity learning paths and labs.</p>
+          <a href="https://www.tryhackme.com" target="_blank">Visit Website</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <img class="contact-icon" src="assets/img/LinkedIn-icon.png" alt="LinkedIn Icon">
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/conner-woods-3a2803350" target="_blank">LinkedIn Profile</a>
+        </div>
+        <div class="contact-item">
+          <img class="contact-icon" src="assets/img/email-icon.png" alt="Email Icon">
+          <h3>Email</h3>
+          <a href="mailto:connerwoods1@gmail.com">connerwoods1@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto py-3 border-top text-center text-body-secondary">
+    <span>© 2026 Conner Woods</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
