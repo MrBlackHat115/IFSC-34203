@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>MrBlackHat Toys</title>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar Bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation"> <!-- Added aria-label for accessibility -->
+    <div class="container-fluid"> <!-- Changed to container-fluid for full-width navbar -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#toys">Toys</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Image -->
+  <div class="header-image-container">
+    <img class="header-image" src="assets/img/hacker.jpg" alt="Hacker Image">
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-grow-1">
+
+    <!-- Hero Section -->
+    <section class="py-5 text-center container"> <!-- Removed bg-light for a cleaner look -->
+      <div class="row py-lg-5"> <!-- Added padding for better spacing -->
+        <div class="col-lg-6 col-md-8 mx-auto"> <!-- Adjusted column width for better readability -->
+          <h1 class="fw-light">MrBlackHat Toys</h1>
+          <p class="lead text-body-secondary">Tools and Labs That Teach You Cybersecurity… Without Hacking Your Mom’s Wi-Fi</p>
+          <p><a href="https://www.github.com/MrBlackHat115" class="btn btn-primary my-2">View GitHub</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Toys Section -->
+    <section id="toys" class="py-5 text-center container"> <!-- Removed bg-light for a cleaner look -->
+      <h2 class="page-title">Toys</h2> 
+      <p class="lead text-body-secondary">A collection of cybersecurity tools and labs designed to teach ethical hacking techniques in a fun and engaging way.</p>
+
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4 toy"> <!-- Added toy class for styling -->
+          <div class="card h-100"> <!-- Added h-100 to make all cards the same height -->
+            <img class="toy-image card-img-top" src="assets/img/port-scanner.png" alt="Port Scanner Tool Screenshot">
+            <div class="card-body"> <!-- Added card-body for proper spacing -->
+              <h3 class="card-title">Port Scanner</h3>
+              <p class="card-text">Python-based tool that resolves hostnames into IPv4 addresses and performs TCP port scanning.</p>
+              <a href="https://github.com/MrBlackHat115/Port-Scanner" target="_blank" class="btn btn-primary">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 toy"> <!-- Added toy class for styling -->
+          <div class="card h-100"> <!-- Added h-100 to make all cards the same height -->
+            <img class="toy-image card-img-top" src="assets/img/vulnhunter.png" alt="VulnHunter Tool Screenshot">
+            <div class="card-body">  <!-- Added card-body for proper spacing -->
+              <h3 class="card-title">VulnHunter</h3>
+              <p class="card-text">A vulnerability discovery framework for scanning, validation, and basic exploitation techniques.</p>
+              <a href="https://github.com/MrBlackHat115/VulnHunter" target="_blank" class="btn btn-primary">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 toy"> <!-- Added toy class for styling -->
+          <div class="card h-100"> <!-- Added h-100 to make all cards the same height -->
+            <img class="toy-image card-img-top" src="assets/img/hacking-lab.png" alt="Basic Ethical Hacking Lab Screenshot">
+            <div class="card-body"> <!-- Added card-body for proper spacing -->
+              <h3 class="card-title">Basic Ethical Hacking Lab</h3>
+              <p class="card-text">Beginner-friendly lab teaching reconnaissance, scanning, and vulnerability analysis.</p>
+              <a href="https://github.com/MrBlackHat115/Basic-Ethical-Hacking-Lab" target="_blank" class="btn btn-primary">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 toy"> <!-- Added toy class for styling -->
+          <div class="card h-100"> <!-- Added h-100 to make all cards the same height -->
+            <img class="toy-image card-img-top" src="assets/img/help-desk-lab.png" alt="Help Desk Lab Screenshot">
+            <div class="card-body"> <!-- Added card-body for proper spacing -->
+              <h3 class="card-title">Help Desk Administration Lab</h3>
+              <p class="card-text">Hands-on lab simulating real-world IT support and system administration tasks.</p>
+              <a href="https://github.com/MrBlackHat115/Help-Desk-Administration-Lab" target="_blank" class="btn btn-primary">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 toy"> <!-- Added toy class for styling -->
+          <div class="card h-100"> <!-- Added h-100 to make all cards the same height -->
+            <img class="toy-image card-img-top" src="assets/img/recon-scan-script.png" alt="Recon Scan Script Screenshot">
+            <div class="card-body"> <!-- Added card-body for proper spacing -->
+              <h3 class="card-title">Recon Scan Script</h3>
+              <p class="card-text">Bash script automating reconnaissance tasks like port discovery and directory enumeration.</p>
+              <a href="https://github.com/MrBlackHat115/Recon_scan.sh" target="_blank" class="btn btn-primary">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 toy"> <!-- Added toy class for styling -->
+          <div class="card h-100"> <!-- Added h-100 to make all cards the same height -->
+            <img class="toy-image card-img-top" src="assets/img/directory_discovery.png" alt="Directory Discovery Tool Screenshot">
+            <div class="card-body"> <!-- Added card-body for proper spacing -->
+              <h3 class="card-title">Directory Discovery Tool</h3>
+              <p class="card-text">Python tool for directory enumeration using wordlists to uncover hidden paths.</p>
+              <a href="https://github.com/MrBlackHat115/Directory-discovery" target="_blank" class="btn btn-primary">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 toy"> <!-- Added toy class for styling -->
+          <div class="card h-100"> <!-- Added h-100 to make all cards the same height -->
+            <img class="toy-image card-img-top" src="assets/img/login_bruteforcer.png" alt="Login Bruteforcer Screenshot">
+            <div class="card-body"> <!-- Added card-body for proper spacing -->
+              <h3 class="card-title">Login Bruteforcer</h3>
+              <p class="card-text">Python tool automating login attempts to test authentication system security.</p>
+              <a href="https://github.com/MrBlackHat115/Login-Bruteforcer" target="_blank" class="btn btn-primary">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">  <!-- Removed bg-light for a cleaner look -->
+      <div class="container"> <!-- Added container for proper spacing -->
+        <div class="row align-items-center gy-4">
+          <div class="col-md-4 text-center"> <!-- Added text-center for better alignment -->
+            <img src="assets/img/Linkedin-picture.png" class="img-fluid rounded-circle" width="150" alt="Conner Woods">
+          </div>
+          <div class="col-md-8">
+            <h2 class="mb-4">About The Developer</h2>
+            <p class="lead">Conner Woods is a cybersecurity student focused on ethical hacking, network security, and IT support. His goal is to build a career in cybersecurity, and he shares projects and labs to help others learn and practice ethical hacking skills. Conner is passionate about cybersecurity education and aims to create accessible resources for learners at all levels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-5"> <!-- Removed bg-light for a cleaner look -->
+      <div class="container"> <!-- Added container for proper spacing -->
+        <h2 class="mb-4 text-center">Resources</h2> <!-- Added text-center for better alignment -->
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 text-center"> <!-- Added h-100 to make all cards the same height and text-center for better alignment -->
+              <img class="card-img-top mx-auto d-block mt-4" src="assets/img/cert-icon.png" alt="Cybrary Resource Screenshot" style="width: 80px;">
+              <div class="card-body"> <!-- Added card-body for proper spacing -->
+                <h3 class="card-title">Cybrary</h3>
+                <p class="card-text">Online platform for cybersecurity training and certification.</p>
+                <a href="https://www.cybrary.it" target="_blank" class="btn btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3"> <!-- Added h-100 to make all cards the same height and text-center for better alignment -->
+            <div class="card h-100 text-center"> 
+              <img class="card-img-top mx-auto d-block mt-4" src="assets/img/cert-icon.png" alt="Offensive Security Resource Screenshot" style="width: 80px;">
+              <div class="card-body"> <!-- Added card-body for proper spacing -->
+                <h3 class="card-title">Offensive Security</h3>
+                <p class="card-text">Provider of OSCP, PenTest+, and other practical cybersecurity certifications.</p>
+                <a href="https://www.offensive-security.com" target="_blank" class="btn btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3"> <!-- Added h-100 to make all cards the same height and text-center for better alignment -->
+            <div class="card h-100 text-center"> 
+              <img class="card-img-top mx-auto d-block mt-4" src="assets/img/cert-icon.png" alt="Hack The Box Resource Screenshot" style="width: 80px;">
+              <div class="card-body"> <!-- Added card-body for proper spacing -->
+                <h3 class="card-title">HackTheBox</h3>
+                <p class="card-text">Hands-on penetration testing labs, CTF challenges, and community learning.</p>
+                <a href="https://www.hackthebox.com" target="_blank" class="btn btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3"> <!-- Added h-100 to make all cards the same height and text-center for better alignment -->
+            <div class="card h-100 text-center">
+              <img class="card-img-top mx-auto d-block mt-4" src="assets/img/cert-icon.png" alt="TryHackMe Resource Screenshot" style="width: 80px;">
+              <div class="card-body"> <!-- Added card-body for proper spacing --> 
+                <h3 class="card-title">TryHackMe</h3>
+                <p class="card-text">Interactive, beginner-friendly cybersecurity learning paths and labs.</p>
+                <a href="https://www.tryhackme.com" target="_blank" class="btn btn-primary">Visit Website</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5"> <!-- Removed bg-light for a cleaner look -->
+      <div class="container"> <!-- Added container for proper spacing -->
+        <h2 class="mb-4 text-center">Contact</h2>
+        <div class="row g-4 justify-content-center"> <!-- Added justify-content-center for better alignment -->
+          <div class="col-md-6 col-lg-4"> <!-- Added h-100 to make all cards the same height and text-center for better alignment -->
+            <div class="card h-100 text-center"> <!-- Added h-100 to make all cards the same height and text-center for better alignment -->
+              <img class="card-img-top mx-auto d-block mt-4" src="assets/img/LinkedIn-icon.png" alt="LinkedIn Icon" style="width: 80px;">
+              <div class="card-body"> <!-- Added card-body for proper spacing -->
+                <h3 class="card-title">LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/conner-woods-3a2803350" target="_blank" class="btn btn-primary">LinkedIn Profile</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 text-center">
+              <img class="card-img-top mx-auto d-block mt-4" src="assets/img/email-icon.png" alt="Email Icon" style="width: 80px;">
+              <div class="card-body">
+                <h3 class="card-title">Email</h3>
+                <a href="mailto:connerwoods1@gmail.com" class="btn btn-primary">Send Email</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto py-3 border-top text-center text-body-secondary">
+    <span>© 2026 Conner Woods</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
