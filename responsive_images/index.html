@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Conner Woods">
+    <title>Responsive Images</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Responsive Images using srcset and sizes</h1>
+        <p>Play with this page to see the responsive image behavior</p>
+    </header>
+
+    <main class="layout">
+    <section>
+        <img class="responsive-image" src="assets/img/hackthebox-500.png"
+            srcset="assets/img/hackthebox-500.png 500w, 
+                    assets/img/hackthebox-750.png 750w,
+                    assets/img/hackthebox-1000.png 1000w,
+                    assets/img/hackthebox-1500.png 1500w"
+            sizes="(max-width: 600px) 100vw,
+                   (max-width: 1200px) 50vw,
+                   33vw"
+            alt="hackthebox image">
+
+    </section>
+
+<footer>
+  <div id="copyright">
+    &copy; 2026 Conner Woods | <a href="#top">Top</a>
+  </div>
+</footer>
+
+</body>
+</html>
