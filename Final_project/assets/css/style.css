@@ -225,7 +225,8 @@ p {
    ===================================== */
 .header-image {
   width: 100%;
-  height: 450px;
+  height: auto;
+  max-height: 450px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 40px;
@@ -243,13 +244,28 @@ p {
   border-radius: 8px;
 }
 
-.description-image {
+.description-video {
   width: 100%;
-  max-width: 400px;
+  max-width: 700px;
   border-radius: 8px;
   margin-bottom: 20px;
   display: block;
   margin: auto;
+}
+
+.video-container {
+  display: block;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Ensure media elements are responsive */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Dark-to-light pulsing animation */
@@ -315,7 +331,7 @@ p {
 .toy-image {
   width: 100%;
   max-width: 450px;
-  height: 280px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -570,5 +586,6 @@ strong {
 @media (min-width: 1060px) {
   .container {
     width: 1060px;
+    
   }
 }
