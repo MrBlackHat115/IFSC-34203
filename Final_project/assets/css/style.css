@@ -342,6 +342,7 @@ img, video {
   display: flex;
   flex-direction: column;
   flex: 1;
+  overflow-wrap: break-word;
 }
 
 .toy-content h3 {
@@ -572,13 +573,20 @@ strong {
 @media (min-width: 768px) and (max-width: 1059px) {
   .toy {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 15px;
   }
 
+  /* Image takes 40% of the width*/
   .toy-image {
-    width: 200px;
-    height: 180px;
-    object-fit: cover;
+    flex: 0 0 40%;
+    height: auto;
+    max-width: 40%;
+  }
+
+  /* Ensure content takes remaining space */
+  .toy-content {
+    flex: 1;
   }
 }
 
