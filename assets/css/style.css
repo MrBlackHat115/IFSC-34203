@@ -69,6 +69,19 @@ textarea {
   --light-text: #7f8c8d;
 }
 
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 body {
   font-family: 'Times New Roman', Times, serif;
   background: linear-gradient(135deg, var(--background-color) 0%, #ffffff 100%);
@@ -145,32 +158,28 @@ a {
   }
 }
 
-nav {
-  margin: 2rem 0;
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+nav a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--secondary-color);
+  color: white;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
 
-  a {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: var(--secondary-color);
-    color: white;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-
-    &:hover {
-      background: var(--accent-color);
-      color: white;
-      text-decoration: none;
-    }
-  }
+nav a:hover {
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
 }
 
 footer {
@@ -241,6 +250,8 @@ footer {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* ==========================================================================
@@ -394,4 +405,103 @@ footer {
   (min-resolution: 1.25dppx),
   (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
+}
+
+/* =========================
+   Responsive Media Queries
+   ========================= */
+
+/* 📱 Phone (0–768px) */
+@media (max-width: 768px) {
+
+  /* Stack layout vertically */
+  .layout {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+  }
+
+  main {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  /* Sidebar becomes full width */
+  .sidebar {
+    width: 100%;
+    order: 2;
+    padding: 1rem;
+  }
+
+  .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sidebar li a{
+    display: block;
+    padding: 1rem;
+  }
+
+  .content-section {
+    padding: 1rem;
+  }
+
+  /* Flexbox completion section */
+  .flexbox-completion {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .flexbox-completion .screenshot img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  /* Typography scaling */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================
+   📲 Tablet (768–1059px)
+   ========================= */
+@media (min-width: 769px) and (max-width: 1059px) {
+
+  .layout {
+    gap: 1.5rem;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .flexbox-completion .screenshot img {
+    max-width: 400px;
+    height: auto;
+  }
+
+}
+
+/* =========================
+   🖥 Desktop (1060px+)
+   ========================= */
+@media (min-width: 1060px) {
+
+  .layout {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .sidebar {
+    width: 250px;
+  }
 }
